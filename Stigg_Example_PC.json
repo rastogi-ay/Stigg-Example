@@ -1,0 +1,294 @@
+{
+  "addons": {
+  },
+  "coupons": {
+  },
+  "customCurrencies": {
+  },
+  "featureGroups": {
+  },
+  "features": {
+    "feature-01-templates": {
+      "additionalMetaData": null,
+      "configuration": null,
+      "description": null,
+      "displayName": "Templates",
+      "featureStatus": "NEW",
+      "featureType": "NUMBER",
+      "featureUnits": "template",
+      "featureUnitsPlural": "templates",
+      "meterType": "FLUCTUATING",
+      "refId": "feature-01-templates",
+      "unitTransformation": null
+    },
+    "feature-04-analytics": {
+      "additionalMetaData": null,
+      "configuration": null,
+      "description": null,
+      "displayName": "Analytics",
+      "featureStatus": "NEW",
+      "featureType": "BOOLEAN",
+      "featureUnits": null,
+      "featureUnitsPlural": null,
+      "meterType": "None",
+      "refId": "feature-04-analytics",
+      "unitTransformation": null
+    },
+    "feature-06-messages": {
+      "additionalMetaData": null,
+      "configuration": null,
+      "description": "",
+      "displayName": "Messages",
+      "featureStatus": "NEW",
+      "featureType": "NUMBER",
+      "featureUnits": "message",
+      "featureUnitsPlural": "messages",
+      "meter": {
+        "aggregation": {
+          "field": null,
+          "function": "COUNT"
+        },
+        "filters": [
+          {
+            "conditions": [
+              {
+                "field": "eventName",
+                "operation": "EQUALS",
+                "value": "message-sent"
+              }
+            ]
+          }
+        ]
+      },
+      "meterType": "INCREMENTAL",
+      "refId": "feature-06-messages",
+      "unitTransformation": null
+    }
+  },
+  "packageGroups": {
+  },
+  "plans": {
+    "plan-revvenu-basic": {
+      "additionalMetaData": null,
+      "compatibleAddonRefIds": [
+      ],
+      "compatiblePackageGroups": {
+      },
+      "description": null,
+      "displayName": "Basic",
+      "hiddenFromWidgets": [
+      ],
+      "minimumSpend": null,
+      "overageBillingPeriod": null,
+      "overagePrices": {
+      },
+      "packageEntitlements": {
+        "feature:feature-01-templates": {
+          "behavior": "Increment",
+          "description": null,
+          "displayNameOverride": null,
+          "enumValues": null,
+          "featureGroupRefIds": [
+          ],
+          "featureRefId": "feature-01-templates",
+          "hasUnlimitedUsage": false,
+          "hiddenFromWidgets": [
+          ],
+          "isCustom": null,
+          "isGranted": true,
+          "order": 0,
+          "resetPeriod": null,
+          "resetPeriodConfig": null,
+          "type": "FEATURE",
+          "usageLimit": 3
+        },
+        "feature:feature-06-messages": {
+          "behavior": "Increment",
+          "description": null,
+          "displayNameOverride": null,
+          "enumValues": null,
+          "featureGroupRefIds": [
+          ],
+          "featureRefId": "feature-06-messages",
+          "hasUnlimitedUsage": true,
+          "hiddenFromWidgets": [
+          ],
+          "isCustom": false,
+          "isGranted": true,
+          "order": 3,
+          "resetPeriod": null,
+          "resetPeriodConfig": null,
+          "type": "FEATURE",
+          "usageLimit": null
+        }
+      },
+      "prices": {
+      },
+      "pricingType": "FREE",
+      "productRefId": "product-revvenu",
+      "refId": "plan-revvenu-basic"
+    },
+    "plan-revvenu-essentials": {
+      "additionalMetaData": null,
+      "compatibleAddonRefIds": [
+      ],
+      "compatiblePackageGroups": {
+      },
+      "defaultTrialConfig": {
+        "budget": null,
+        "duration": 30,
+        "trialEndBehavior": null,
+        "units": "DAY"
+      },
+      "description": null,
+      "displayName": "Essentials",
+      "hiddenFromWidgets": [
+      ],
+      "minimumSpend": null,
+      "overageBillingPeriod": null,
+      "overagePrices": {
+      },
+      "packageEntitlements": {
+        "feature:feature-04-analytics": {
+          "behavior": "Increment",
+          "description": null,
+          "displayNameOverride": null,
+          "enumValues": null,
+          "featureGroupRefIds": [
+          ],
+          "featureRefId": "feature-04-analytics",
+          "hasUnlimitedUsage": false,
+          "hiddenFromWidgets": [
+          ],
+          "isCustom": null,
+          "isGranted": true,
+          "order": 3,
+          "resetPeriod": null,
+          "resetPeriodConfig": null,
+          "type": "FEATURE",
+          "usageLimit": null
+        }
+      },
+      "parentPlanRefId": "plan-revvenu-basic",
+      "prices": {
+        "PER_UNIT-RECURRING-feature-01-templates-ANNUALLY-default-RECURRING}": {
+          "billingCadence": "RECURRING",
+          "billingCountryCode": null,
+          "billingModel": "PER_UNIT",
+          "billingPeriod": "ANNUALLY",
+          "blockSize": null,
+          "creditGrantCadence": null,
+          "creditRate": null,
+          "featureRefId": "feature-01-templates",
+          "isNewPaygoType": false,
+          "maxUnitQuantity": null,
+          "minUnitQuantity": null,
+          "price": {
+            "amount": 60,
+            "currency": "usd"
+          },
+          "resetPeriod": null,
+          "resetPeriodConfig": null,
+          "tiers": null,
+          "tiersMode": null,
+          "topUpCustomCurrencyId": null
+        },
+        "PER_UNIT-RECURRING-feature-01-templates-MONTHLY-default-RECURRING}": {
+          "billingCadence": "RECURRING",
+          "billingCountryCode": null,
+          "billingModel": "PER_UNIT",
+          "billingPeriod": "MONTHLY",
+          "blockSize": null,
+          "creditGrantCadence": null,
+          "creditRate": null,
+          "featureRefId": "feature-01-templates",
+          "isNewPaygoType": false,
+          "maxUnitQuantity": null,
+          "minUnitQuantity": null,
+          "price": {
+            "amount": 6,
+            "currency": "usd"
+          },
+          "resetPeriod": null,
+          "resetPeriodConfig": null,
+          "tiers": null,
+          "tiersMode": null,
+          "topUpCustomCurrencyId": null
+        }
+      },
+      "pricingType": "PAID",
+      "productRefId": "product-revvenu",
+      "refId": "plan-revvenu-essentials"
+    },
+    "plan-revvenu-pro": {
+      "additionalMetaData": null,
+      "compatibleAddonRefIds": [
+      ],
+      "compatiblePackageGroups": {
+      },
+      "description": null,
+      "displayName": "Professional",
+      "hiddenFromWidgets": [
+      ],
+      "minimumSpend": null,
+      "overageBillingPeriod": null,
+      "overagePrices": {
+      },
+      "packageEntitlements": {
+        "feature:feature-01-templates": {
+          "behavior": "Increment",
+          "description": null,
+          "displayNameOverride": null,
+          "enumValues": null,
+          "featureGroupRefIds": [
+          ],
+          "featureRefId": "feature-01-templates",
+          "hasUnlimitedUsage": false,
+          "hiddenFromWidgets": [
+          ],
+          "isCustom": true,
+          "isGranted": true,
+          "order": 0,
+          "resetPeriod": null,
+          "resetPeriodConfig": null,
+          "type": "FEATURE",
+          "usageLimit": null
+        }
+      },
+      "parentPlanRefId": "plan-revvenu-essentials",
+      "prices": {
+      },
+      "pricingType": "CUSTOM",
+      "productRefId": "product-revvenu",
+      "refId": "plan-revvenu-pro"
+    }
+  },
+  "products": {
+    "product-revvenu": {
+      "additionalMetaData": {
+        "recommendedPlan": "plan-revvenu-essentials"
+      },
+      "description": null,
+      "displayName": "Revvenu",
+      "isDefaultProduct": true,
+      "multipleSubscriptions": false,
+      "productSettings": {
+        "downgradePlanRefId": "plan-revvenu-basic",
+        "prorateAtEndOfBillingPeriod": null,
+        "subscriptionCancellationTime": "END_OF_BILLING_PERIOD",
+        "subscriptionEndSetup": "DOWNGRADE_TO_FREE",
+        "subscriptionStartPlanRefId": "plan-revvenu-essentials",
+        "subscriptionStartSetup": "TRIAL_PERIOD"
+      },
+      "refId": "product-revvenu",
+      "rootClonedProductRefId": null,
+      "rules": [
+      ],
+      "status": "PUBLISHED"
+    }
+  },
+  "widgetConfiguration": {
+  },
+  "workflows": {
+  }
+}

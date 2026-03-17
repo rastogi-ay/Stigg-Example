@@ -1,7 +1,7 @@
 {
-  "name": "per-unit-api",
+  "name": "node-api",
   "version": "1.0.0",
-  "description": "Per-Unit API Backend",
+  "description": "Node API Backend",
   "main": "index.js",
   "type": "module",
   "scripts": {

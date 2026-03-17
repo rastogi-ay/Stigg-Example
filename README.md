@@ -1,14 +1,12 @@
-# TODO: UPDATE THIS FILE
+# Stigg Implementation (Node.js Backend)
 
-# Per-Unit Pricing (Stigg Example)
-
-Example app demonstrating **feature gating** with **the per-unit pricing model** sandbox from [Stigg](https://www.stigg.io/). Includes a React frontend and a Node.js backend that enforce entitlements and report usage.
+Example app demonstrating **feature gating** and **reporting usage** using [Stigg](https://www.stigg.io/). Includes a React frontend and a Node.js backend.
 
 ## Purpose
 
 This repo is a **lightweight reference implementation** for:
 
-- **Entitlements (boolean and metered)** — Metered features for Templates and Messages (usage limits, reporting when items are created). Boolean feature for Analytics (gated access).
+- **Entitlements (boolean and metered)** — Metered features for Templates and Messages (reporting usage when items are created, setting usage limits). Boolean feature for Analytics (gating feature access).
 - **Server-side enforcement** — The backend uses the Stigg Node SDK to validate entitlements and report usage / events.
 
 ## Setup
@@ -19,17 +17,10 @@ This repo is a **lightweight reference implementation** for:
 - A **Stigg** account and project (for API keys and feature setup)
 
 ### Stigg setup
-
-**First-time setup** — When you're new to Stigg, you'll see the pricing model screen below. **Choose "Per Unit"** as the pricing model.
-
-![Stigg setup — pricing model selection](images/pricing-model-selection.png)
-
-
-**Existing account** — If you already have a Stigg project, go to **Getting started** in the sidebar. You'll see a screen like this:
-
-![Stigg — Getting started](images/getting-started-screen.png)
-
-Then **click "Generate sandbox"** to create a per-unit sandbox.
+- Once you're in the app, navigate to the Settings page. You then want to click on + Generate Sandbox.
+- Under the Template Type dropdown, choose 'Custom - JSON file'.
+- Insert the JSON within Stigg_Example_PC.json.
+- Give your new environment a name of your choice.
 
 ---
 
@@ -37,7 +28,7 @@ Then **click "Generate sandbox"** to create a per-unit sandbox.
 
 ```bash
 git clone <this-repo-url>
-cd "Per-Unit Pricing"
+cd "Stigg-Example"
 
 # Backend
 cd backend
